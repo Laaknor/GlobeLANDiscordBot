@@ -9,6 +9,8 @@ bot.on("ready", async () => {
     bot.user.setActivity("på GlobeLAN!");
 });
 
+bot.on("error", console.error);
+
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
