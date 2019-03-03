@@ -1,0 +1,1 @@
+This is my first attempt at a Discord-bot. Its main feature is showing the number of free seats on GlobeLAN seatmap.
