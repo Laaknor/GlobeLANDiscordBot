@@ -49,14 +49,13 @@ bot.on("message", async message => {
             }
             else {
                 console.log("Seatmap is open");
-                let seats = +body.seats.open + +body.seats.not_open;
+                let seats = +body.seats.open + +body.seats.not_open + +body.seats.password_reserved;
                 let serverembed = new Discord.RichEmbed()
                     .setDescription("Plassinformasjon")
                     .setColor("#15f153")
                     .addField("Ledige plasser:", seats - body.seats_taken)
                     .addField("Totalt antall plasser:", seats)
-                    .addField("Antall plasser tatt:", body.seats_taken)
-                    .addField("Antall plasser ikke åpnet ennå:", body.seats.not_open);
+                    .addField("Antall plasser tatt:", body.seats_taken);
                 return message.channel.send(serverembed);
                 }
                 
